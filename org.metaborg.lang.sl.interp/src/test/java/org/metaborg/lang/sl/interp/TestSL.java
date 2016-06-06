@@ -21,7 +21,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-import org.metaborg.lang.sl.interpreter.generated.SLLanguage;
+import org.metaborg.lang.sl.interpreter.generated.SLEntryPoint;
 import org.metaborg.lang.sl.interpreter.generated.TypesGen;
 import org.metaborg.lang.sl.interpreter.natives.ObjData;
 import org.metaborg.meta.lang.dynsem.interpreter.nodes.rules.RuleResult;
@@ -62,8 +62,8 @@ public class TestSL {
 	@Test
 	public void testEagerEval() throws Exception {
 
-		RuleResult res = SLLanguage.evaluate(testData.programFile, inputStream,
-				outputStream, errorStream);
+		RuleResult res = SLEntryPoint.evaluateStatic(testData.programFile,
+				inputStream, outputStream, errorStream);
 
 		Object val = res.result;
 

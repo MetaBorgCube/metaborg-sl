@@ -24,6 +24,8 @@ pardonedLanguages:
 - SDF
 - ds
 language:
+  sdf:
+    sdf2table: java
   stratego:
     format: ctree
     args:
